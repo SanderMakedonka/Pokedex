@@ -1,0 +1,318 @@
+body{
+    margin: 0;    
+    background: rgb(208, 208, 153);
+}
+.logo{
+    object-fit:cover ;
+    border-radius: 100%;
+}
+.contentContainer {
+    background-color: rgb(134, 25, 25);
+}
+.d-flex{
+    margin-left:80px;
+}
+.logoHeader{
+    font-size: 50px !important;
+}
+h3::first-letter {
+    text-transform: capitalize;
+}
+h4::first-letter {
+    text-transform: capitalize;
+}
+#statName::first-letter{
+    text-transform: capitalize;
+}
+tbody tr td:first-child{
+    width: 150px;
+    padding-left: 30px;
+}
+.d-one{
+    display: none !important;
+}
+.input {
+    width:300px;
+    border-radius:15px;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    border: 0.5mm solid rgb(134, 25, 25);
+}
+
+.button {
+    padding:18px;
+    border-radius:15px;
+    width:200px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0.5mm solid rgb(134, 25, 25);
+}
+.placeholder {
+    font-size: 18px;
+}
+.button:hover {
+    background-color: rgb(134, 25, 25);
+}
+.contentContainer{
+    margin-top: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pokemonMiniCard {
+    height: 350px;
+    width: 285px;
+    border-radius: 20px;
+    margin: 8px;
+    cursor: pointer;
+    transition: 125ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2);
+    background-image: url('img/ball_bg.png');
+}
+.pokemonMiniCard:hover {
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.4);
+    transition: all 125ms ease-in-out;
+}
+.pokemonMiniCard img {
+    height: 170px;
+    z-index: 2;
+    transition: 125ms;
+    margin-bottom: -15px;
+}
+.pokemonMiniCard img:hover {
+    transform: scale(1.15);
+    transition: 125ms;
+    z-index: 6;
+}
+.pokemonMiniCard h3 {
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 10px 0;
+   /* border-radius: 10px 50px 0 0;*/
+}
+.pokemonMiniCard b {
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+.pokeId{
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    font-size: 20px;
+    z-index: 5;  
+}
+.fullscreen{
+    position: absolute;
+    position: fixed;
+    margin-top: -50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    min-height: 100vh;
+    min-width: 100vw;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.fullScreenContainer{
+    position: relative;
+    background-color: white;
+    height: 700px;
+    width: 400px;
+    box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    cursor: default ;
+}
+.pokePic{
+    height: 250px;
+    position: absolute;
+    top: 34%;
+    margin: -125px;
+    left: 65%;
+    right: 35%;
+}
+.fullscreenBg{
+    height: 350px;
+    border-radius: 20px 0 0 ;
+}
+.fullscreenBg h3{
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 40px;    
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 80px 20px 0 0;
+}
+.fullscreenBg h4{
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 20px;    
+    text-align: center;
+}
+.fullscreenBgbottom{
+    background-color: white;
+    height: 30px;
+    margin-top: -30px;
+    border-radius:30px 30px 0 0 ;
+}
+.pokeIdFull{
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 30px;
+}
+.boxForType{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.boxForType h4{
+    font-size: 20px;
+    margin: 0;
+    padding: 7px; 
+       
+}
+.typeBox{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.cardMenu{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    align-items: center;
+}
+.cardMenu img{
+    position: unset;
+    height: 35px;
+    margin: 0;
+    cursor: pointer;
+
+}
+.cardMenuText{
+ font-weight: bold;
+ cursor: pointer;
+ color: rgba(0, 0, 0, 0.404);
+}
+.isActiv{
+    color: black;  
+}
+.closeTag{
+    position: absolute;
+    height: 30px ;
+    width: 30px ;
+    z-index: 200;
+    right: 10px ;
+    top: 10px ;
+    cursor: pointer;
+    filter: invert();
+}
+.cardMenuContend{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    overflow: auto;
+    
+}
+.logoHeader{
+    cursor: pointer;
+}
+.objektFit{
+    object-fit: cover;
+} 
+
+@media(max-width: 420px){
+    .fullScreenContainer{
+       width: 100%;
+       height: 80vh ;
+       border-radius: 0;
+    }
+    
+    .dUnset{
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+    #searchButton{
+        display: none;
+    }
+    #searchInput{
+        display: none;
+    }
+    .pokeIdFull{
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        transform: rotate(15deg);
+        z-index: 100;
+    }
+
+    .pokePic{
+        height: 200px;
+        left: 75%;
+        right: 25%;
+        top: 27%;
+    }
+    .contentContainer{
+        flex-direction: column;
+    }
+    .pokemonMiniCard{
+        margin:5px 0;
+        border-radius: 0;
+        width: 100vw;
+        height: 150px;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .pokemonMiniCard img{
+        height: 120px;
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+    .pokemonMiniCard h3{
+        border-radius: 0;
+    }
+    .fullscreenBg h3{
+        border-radius: 0;
+        padding-top: 15px;
+    }
+    .fullscreenBg{
+        border-radius: 0;
+        height: 280px;
+    }
+    
+    .boxForType h4{
+        font-size: 15px;
+    }
+}   
